@@ -6,9 +6,6 @@ import { auth } from '../../redux/reducers/usersReducer';
 
 const Auth = () => {
 
-    const foundUser = useSelector(state => state.users.currentUser);
-    console.log(foundUser);
-
     const [form, setForm] = useState({
         login: '',
         password: ''
@@ -26,6 +23,8 @@ const Auth = () => {
       }
 
       const handleUserAuth = () => {
+        const foundUser = usersList.find(user => user.login === form.login);
+
         if (!foundUser) {
             alert(`User ${form.login} is not defined. Please, check accurate of your login or create a new account`);
             return;

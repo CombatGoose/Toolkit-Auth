@@ -33,7 +33,7 @@ const Register = () => {
           return;
         };
 
-        if (form.login.length < 1 || form.firstname.length < 1 || form.lastname.length < 1 || form.password.length < 8) {
+        if (form.login.length < 1 || form.firstname.length < 1 || form.lastname.length < 1 || form.password.length < 1) {
           alert('Login and first and last names are required! Min password length is 8.');
           return;
         }
